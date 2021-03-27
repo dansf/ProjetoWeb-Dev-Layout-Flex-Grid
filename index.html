@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex and Grid</title>
+
+    <!-- Link fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@600&display=swap" rel="stylesheet">
+    <!-- Link Css -->
+    <link rel="stylesheet" href="./Flex.css">
+
+<!-- Estilo Css -->
+<style>
+*{
+    border-radius: border-box;
+    margin: 2.5px;
+    font-family: 'Fira Code', monospace;
+    color: white;
+    text-align: center;
+}
+
+/* Primeira parte superior */
+header{
+    height: 450px;
+}
+
+.primeirapartesup{
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+}
+
+.roxosupesq{
+    flex: 1;
+    height: 150px;
+    background-color: purple;
+}
+
+.azulsupdir{
+    flex: 1;
+    height: 150px;
+    background-color: blue;
+}
+
+/* Segunda parte superior */
+.segundapartesup{
+    display: flex;    
+    flex-direction: column;
+    height: 300px;
+}
+
+.laranjasup{
+    flex: 1;
+    height: 275px;
+    background-color: orange;
+}
+
+.roxosup{
+    flex: 1;
+    height: 275px;
+    background-color: purple;
+}
+
+/* Parte do meio */
+.cimameio{
+    display: flex;
+}
+
+.amarelo{
+    background-color: rgb(238, 204, 13);
+    height: 150px;
+    flex: 0.5;
+}
+
+.verde{
+    background-color: green;
+    height: 150px;
+    flex: 0.5;
+}
+
+.marrom{
+    background-color: burlywood;
+    height: 150px;
+    flex: 0.5;
+}
+
+.azulclaro{
+    background-color: cyan;
+    height: 150px;
+    flex: 1.52;
+}
+
+.baixomeio{
+    display: flex;
+}
+
+.azulescuro{
+    background-color: rgb(58, 128, 233);
+    height: 150px;
+    flex: 1;
+}
+
+.roxo{
+    background-color: rgb(197, 14, 197);
+    height: 150px;
+    flex : 1;
+}
+
+/* Parte inferior */
+footer{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+}
+
+.pretoinf{
+    flex: 1;
+    height: 100px;
+    background-color: gray;
+}
+
+.roxoinf{
+    flex: 1;
+    height: 100px;
+    background-color: purple;
+}
+</style>
+
+</head>
+<body>
+    <header>
+        <div class="primeirapartesup">
+            <div class="roxosupesq">Source Port (16)</div>
+            <div class="azulsupdir">Destination Port (16)</div>
+        </div>
+
+        <div class="segundapartesup">
+            <div class="laranjasup">Sequence Number (32)</div>
+            <div class="roxosup">Acknowledgement (32)</div>
+        </div>
+    </header>
+
+    <section>
+        <div class="cimameio">
+            <div class="amarelo">Header Length(6)</div>
+            <div class="verde">Reserved(6)</div>
+            <div class="marrom">Code Bits(16)</div>
+            <div class="azulclaro">Windows(16)</div>
+        </div>
+
+        <div class="baixomeio">
+            <div class="azulescuro">Checksum(16)</div>
+            <div class="roxo">Urgent(16)</div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="pretoinf">Option(0-32)</div>
+        <div class="roxoinf">Data</div>
+    </footer>
+
+</body>
+</html>
